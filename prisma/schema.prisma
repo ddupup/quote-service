@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Session {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now())
+}
+
+// 文章
+model Article {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
+}
+
+// 主题图片
+model Image {
+  id        Int      @id @default(autoincrement())
+  imgUrl    String
+  imgName   String
+  imgSize   Int
+  createdAt DateTime @default(now())
+}
