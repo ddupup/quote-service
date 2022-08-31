@@ -3,7 +3,7 @@ import logger from 'koa-logger'
 import bodyParser from 'koa-bodyparser'
 import { isProd } from '../constants'
 
-const useBeforeMiddlewares = <T extends Koa>(app: T): T => {
+export const useBeforeMiddlewares = <T extends Koa>(app: T): T => {
   if (isProd()) {
     app.use(logger())
   }
@@ -12,6 +12,3 @@ const useBeforeMiddlewares = <T extends Koa>(app: T): T => {
 
   return app
 }
-
-
-export default useBeforeMiddlewares;

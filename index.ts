@@ -1,12 +1,17 @@
-const Koa = require('koa');
-const app = new Koa();
+import createServer from '@configs/createServer';
+import CONSTANTS from '@configs/constants/index';
 
-const CONSTANTS = require('@configs/constants/index');
+const main = async () => {
+    try {
+        const app = await createServer();
+        app.listen(CONSTANTS.PORT, () => {
+            console.log(
+                `server listening on http://localhost:${CONSTANTS.PORT}, in ${CONSTANTS.ENV_LABEL} mode.`
+            );
+        });
+    } catch (error) {
+        console.log(`${error}`);
+    }
+};
 
-app.use(async (ctx) => {
-    ctx.body = 'Hello World';
-});
-
-app.listen(CONSTANTS.PORT, () => {
-    console.log(`server listening on http://localhost:${CONSTANTS.PORT}, in ${CONSTANTS.ENV_LABEL} mode.`);
-});
+main();

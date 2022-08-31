@@ -1,40 +1,26 @@
 {
     "compilerOptions": {
-      "allowJs": true,
-      "moduleResolution": "Node",
-      "module": "commonjs",
-      "outDir": "./dist",
-      "lib": ["ESNext"],
-      "removeComments": true,
-      "skipLibCheck": true,
-      "noImplicitAny": false,
-      "esModuleInterop": true,
-      "preserveConstEnums": true,
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "typeRoots": [
-        "node_modules/@types",
-        "typings"
-      ],
-      "baseUrl": ".",
-      "paths": {
-        "@configs/*": ["./configs/*"],
-        "@app": ["app"]
-      },
+        "allowJs": true,
+        "moduleResolution": "Node",
+        "module": "commonjs",
+        "outDir": "./dist",
+        "lib": ["ESNext"],
+        "removeComments": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "esModuleInterop": true,
+        "preserveConstEnums": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "typeRoots": ["node_modules/@types", "typings"],
+        "baseUrl": "./",
+        "paths": {
+            "@configs/*": ["configs/*"],
+            "@src/*": ["src/*"]
+        }
     },
     "compileOnSave": false,
-    "includes": [
-      "app/**/*",
-      "configs/**/*",
-      "**/*.ts",
-      "**/*.tsx"
-    ],
-    "files": [
-      "app.ts",
-    ],
-    "exclude": [
-      "node_modules",
-      "dist"
-    ]
-  }
-  
+    "includes": ["src/**/*", "configs/**/*", "**/*.ts", "**/*.tsx"],
+    "files": ["index.ts"],
+    "exclude": ["node_modules", "dist"]
+}
