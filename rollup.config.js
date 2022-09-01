@@ -10,7 +10,6 @@ export default {
         ts({
             tsconfig: "tsconfig.json"
         }),
-        sourceMaps(),
         nodeResolve(),
     ],
 
