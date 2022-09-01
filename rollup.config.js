@@ -11,9 +11,7 @@ export default {
             tsconfig: "tsconfig.json"
         }),
         nodeResolve(),
-        commonjs({
-            include: 'node_modules/**',
-        }),
+        commonjs(),
     ],
 
     output: {
