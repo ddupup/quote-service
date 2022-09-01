@@ -1,5 +1,5 @@
 import ts from 'rollup-plugin-ts';
-import sourceMaps from "rollup-plugin-sourcemaps";
+import commonjs from 'rollup-plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default {
@@ -11,6 +11,9 @@ export default {
             tsconfig: "tsconfig.json"
         }),
         nodeResolve(),
+        commonjs({
+            include: 'node_modules/**',
+        }),
     ],
 
     output: {
