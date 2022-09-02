@@ -9,8 +9,8 @@
         "start-dev": "export NODE_ENV=development; ts-node -r tsconfig-paths/register index.ts",
         "test": "echo \"Error: no test specified\" && exit 1",
         "prettier": "prettier --write '**/*.{js,ts}'",
-        "build": "rimraf dist && rimraf build && tsc && tsc-alias && node ./scripts/build.js",
-        "start": "prisma generate && prisma migrate deploy && export NODE_ENV=production; node ./build/index.js"
+        "build": "rimraf dist-ts && rimraf dist && tsc && tsc-alias && node ./scripts/build.js",
+        "start": "prisma generate && prisma migrate deploy && export NODE_ENV=production; node ./dist/index.js"
     },
     "keywords": [],
     "author": "",

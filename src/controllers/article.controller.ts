@@ -8,7 +8,7 @@ import {
     QueryParam,
 } from 'routing-controllers';
 import {ArticleService} from '../services/article.service';
-import {Prisma} from '@prisma/client';
+import type {Prisma} from '@prisma/client';
 import {Service} from 'typedi';
 
 @JsonController()
