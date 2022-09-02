@@ -82,6 +82,7 @@ web_modules/
 .parcel-cache
 
 dist
+build
 
 # Gatsby files
 .cache/

@@ -2,16 +2,16 @@ const {nodeExternalsPlugin} = require('esbuild-node-externals');
 
 require('esbuild')
     .build({
-        entryPoints: ['index.jsx'],
+        entryPoints: ['./dist/index.js'],
         bundle: true,
-        outfile: 'dist/index.js',
+        outfile: 'build/index.js',
         platform: 'node',
-        external: ['cors', 'kcors'],
         plugins: [
             nodeExternalsPlugin({
                 dependencies: false,
             }),
         ],
+        external: ['cors', 'kcors'],
     })
     .catch((err) => {
         console.log(err);

@@ -1,0 +1,22 @@
+{
+    "verbose": false,
+    "debug": false,
+    "exec": "npm run nodemon:dev",
+    "ignore": [
+        "mochawesome-report",
+        "node_modules",
+        "./test",
+        "**/*.d.ts",
+        "*.test.ts",
+        "*.spec.ts",
+        "fixtures/*",
+        "test/**/*",
+        "docs/*"
+    ],
+    "events": {
+        "restart": ""
+    },
+    "watch": ["./src", "./configs", "./index.ts"],
+    "ext": "ts",
+    "inspect": true
+}
